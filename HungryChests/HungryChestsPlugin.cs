@@ -14,7 +14,7 @@ namespace HungryChests
     {
         private const string MyGUID = "com.equinox.HungryChests";
         private const string PluginName = "HungryChests";
-        private const string VersionString = "1.0.0";
+        private const string VersionString = "2.0.0";
 
         private const string VoidableItemsKey = "VoidableItems";
         public static ConfigEntry<string> VoidableItems;

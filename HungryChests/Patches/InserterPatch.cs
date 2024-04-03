@@ -14,8 +14,9 @@ namespace HungryChests.Patches
         static void deleteLastChestSlot(InserterInstance __instance) {
             if(__instance.giveResourceContainer.typeIndex == MachineTypeEnum.Chest) {
                 Inventory inventory = __instance.giveResourceContainer.GetInventory(0);
-                if (!inventory.myStacks[55].isEmpty && getVoidableItems().Contains(inventory.myStacks[55].info.displayName)) {
-                    inventory.RemoveResourcesFromSlot(inventory.numSlots - 1, inventory.myStacks[55].count);
+                int maxIndex = inventory.numSlots - 1;
+                if (!inventory.myStacks[maxIndex].isEmpty && getVoidableItems().Contains(inventory.myStacks[maxIndex].info.displayName)) {
+                    inventory.RemoveResourcesFromSlot(maxIndex, inventory.myStacks[maxIndex].count);
                 }
             }
         }
